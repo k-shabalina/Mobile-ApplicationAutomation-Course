@@ -13,4 +13,14 @@ public class MainClassTest {
             System.out.println("getLocalNumber method returns not 14");
         }
     }
+
+    @Test
+    public void testGetClassNumber()
+    {
+        if (Main.getClassNumber() > 45){
+            System.out.println("getClassNumber method returns a number greater 45");
+        }else{
+            System.out.println("getClassNumber method returns a number less than or equal to 45");
+        }
+    }
 }
