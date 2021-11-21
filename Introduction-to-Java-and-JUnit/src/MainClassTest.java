@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class MainClassTest {
 
@@ -30,6 +31,10 @@ public class MainClassTest {
     @Test
     public void testGetClassString()
     {
-        assertTrue("GetClassString method does not return hello or Hello", Main.getClassString().toLowerCase().contains("hello"));
+        if (Main.getClassString().contains("Hello") == true || Main.getClassString().contains("hello") == true) {
+            System.out.println("GetClassString method does return hello or Hello");
+        }else{
+            fail("GetClassString method does not return hello or Hello");
+        }
     }
 }
